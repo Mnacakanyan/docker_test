@@ -1,28 +1,21 @@
 package com.nairi.docker_test.repository.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String name;
-    private String email;
 
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
+    public User() {}
+    public User(String name) { this.name = name; }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
+    public Long getId() { return id; }
+    public String getName() { return name; }
 }

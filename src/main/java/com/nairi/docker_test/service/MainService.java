@@ -1,6 +1,6 @@
 package com.nairi.docker_test.service;
 
-import com.nairi.docker_test.repository.MainRepository;
+import com.nairi.docker_test.repository.UserRepository;
 import com.nairi.docker_test.repository.model.User;
 import org.springframework.stereotype.Service;
 
@@ -9,14 +9,11 @@ import java.util.List;
 @Service
 public class MainService {
 
-    private final MainRepository mainRepository;
+    private final UserRepository userRepository;
 
-    public MainService(MainRepository mainRepository) {
-        this.mainRepository = mainRepository;
+    public MainService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
-    public List<User> getUsers(){
-        return mainRepository.getUsers();
-    }
 
 }
