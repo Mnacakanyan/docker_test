@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:17
 WORKDIR /app
 COPY target/docker_test-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8081
